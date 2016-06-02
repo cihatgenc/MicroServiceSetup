@@ -11,10 +11,10 @@ cinst notepadplusplus
 cinst 7zip
 cinst git
 cinst gitkraken
-cinst cmder
+# cinst cmder
 cinst sublimetext3
 cinst golang
-cinst visualstudio2015professional -packageParameters "--AdminFile c:\path to your\AdminDeployment.xml"
+cinst visualstudio2015professional -packageParameters "--AdminFile https://raw.githubusercontent.com/cihatgenc/MicroServiceSetup/master/AdminDeployment.xml"
 cinst visualstudiocode
 cinst make
 cinst virtualbox
