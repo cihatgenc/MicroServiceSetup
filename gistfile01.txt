@@ -1,6 +1,9 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
 Enable-RemoteDesktop
 Disable-UAC
+cinst boxstarter
+cinst chocolatey
+cinst chocolateygui
 cinst googlechrome
 cinst firefox
 cinst notepadplusplus
