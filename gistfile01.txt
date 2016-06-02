@@ -1,6 +1,7 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
 Enable-RemoteDesktop
 Disable-UAC
+Install-WindowsUpdate -AcceptEula
 cinst boxstarter
 cinst chocolatey
 cinst chocolateygui
@@ -13,7 +14,7 @@ cinst gitkraken
 cinst cmder
 cinst sublimetext3
 cinst golang
-cinst visualstudio2015professional
+cinst visualstudio2015professional -packageParameters "--AdminFile c:\path to your\AdminDeployment.xml"
 cinst visualstudiocode
 cinst make
 cinst virtualbox
