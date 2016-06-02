@@ -1,3 +1,23 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
 Enable-RemoteDesktop
 Disable-UAC
+cinst googlechrome
+cinst firefox
+cinst notepadplusplus
+cinst 7zip
+cinst git
+cinst gitkraken
+cinst cmder
+cinst sublimetext3
+cinst golang
+cinst visualstudio2015professional
+cinst visualstudiocode
+cinst make
+cinst virtualbox
+cinst virtualbox.extensionpack
+cinst vagrant
+cinst vagrant-manager
+cinst slack
+cinst powergui
+cinst clink
+cinst fiddler4
