@@ -1,6 +1,6 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
 Enable-RemoteDesktop
-Disable-UAC
+# Disable-UAC
 Install-WindowsUpdate -AcceptEula
 cinst boxstarter
 cinst chocolatey
