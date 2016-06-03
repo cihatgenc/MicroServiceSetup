@@ -1,27 +1,35 @@
+# Boxstarter options
+$Boxstarter.RebootOk=$true # Allow reboots?
+$Boxstarter.NoPassword=$false # Is this a machine with no login password?
+$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
+
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
 Enable-RemoteDesktop
 # Disable-UAC
 Install-WindowsUpdate -AcceptEula
-cinst boxstarter
-cinst chocolatey
-cinst chocolateygui
-cinst googlechrome
-cinst firefox
-cinst notepadplusplus
-cinst 7zip
-cinst git
-cinst gitkraken
+if (Test-PendingReboot) { Invoke-Reboot }
+cinst boxstarter -y
+cinst chocolatey -y
+cinst chocolateygui -y
+cinst googlechrome -y
+cinst firefox -y
+cinst notepadplusplus -y
+cinst 7zip -y
+cinst git -y
+cinst gitkraken -y
 # cinst cmder
-cinst sublimetext3
-cinst golang
-cinst visualstudio2015professional -packageParameters "--AdminFile https://raw.githubusercontent.com/cihatgenc/MicroServiceSetup/master/AdminDeployment.xml"
-cinst visualstudiocode
-cinst make
-cinst virtualbox
-cinst virtualbox.extensionpack
-cinst vagrant
-cinst vagrant-manager
-cinst slack
-cinst powergui
-cinst clink
-cinst fiddler4
+cinst sublimetext3 -y
+cinst golang -y
+cinst visualstudio2015professional -packageParameters "--AdminFile https://raw.githubusercontent.com/cihatgenc/MicroServiceSetup/master/AdminDeployment.xml" -y
+if (Test-PendingReboot) { Invoke-Reboot }
+cinst visualstudiocode -y
+cinst make -y
+cinst virtualbox -y
+cinst virtualbox.extensionpack -y
+cinst vagrant -y
+cinst vagrant-manager -y
+cinst slack -y
+cinst powergui -y
+cinst clink -y
+cinst fiddler4 -y
+if (Test-PendingReboot) { Invoke-Reboot }
