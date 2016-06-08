@@ -3,6 +3,8 @@ $Boxstarter.RebootOk=$true # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
+Set-BoxstarterConfig -NugetSources "https://chocolatey.org/api/v2"
+
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
 Enable-RemoteDesktop
 # Disable-UAC
@@ -17,12 +19,13 @@ cinst notepadplusplus -y
 cinst 7zip -y
 cinst git -y
 cinst gitkraken -y
-# cinst cmder
 cinst sublimetext3 -y
 cinst golang -y
 cinst visualstudio2015professional -packageParameters "--AdminFile https://raw.githubusercontent.com/cihatgenc/MicroServiceSetup/master/AdminDeployment.xml" -y
 if (Test-PendingReboot) { Invoke-Reboot }
 cinst visualstudiocode -y
+cinst resharper -y
+Install-ChocolateyVsixPackage go https://visualstudiogallery.msdn.microsoft.com/bd7675ba-1bf5-4395-8c5a-4fc19dfc0d76/file/53665/3/Tvl.VisualStudio.Language.Go.vsix
 cinst make -y
 cinst virtualbox -y
 cinst virtualbox.extensionpack -y
@@ -32,4 +35,17 @@ cinst slack -y
 cinst powergui -y
 cinst clink -y
 cinst fiddler4 -y
+cinst chefdk -y
+cinst dotpeek -y
+cinst nodejs -y
+cinst packer -y
+cinst TelnetClient -source windowsFeatures
+# Custom repo stuff
+Set-BoxstarterConfig -NugetSources "https://www.myget.org/F/maverick-mul/api/v2"
+cinst liteide -y
+Install-ChocolateyPinnedTaskBarItem "c:\tools\liteide\bin\liteide.exe"
+Set-BoxstarterConfig -NugetSources "https://www.myget.org/F/choco-cmder/api/v2"
+cinst cmder -y
+# Back to original repo
+Set-BoxstarterConfig -NugetSources "https://chocolatey.org/api/v2"
 if (Test-PendingReboot) { Invoke-Reboot }
