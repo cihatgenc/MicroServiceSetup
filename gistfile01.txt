@@ -25,7 +25,7 @@ cinst visualstudio2015professional -packageParameters "--AdminFile https://raw.g
 if (Test-PendingReboot) { Invoke-Reboot }
 cinst visualstudiocode -y
 cinst resharper -y
-Install-ChocolateyVsixPackage go https://visualstudiogallery.msdn.microsoft.com/bd7675ba-1bf5-4395-8c5a-4fc19dfc0d76/file/53665/3/Tvl.VisualStudio.Language.Go.vsix
+# Install-ChocolateyVsixPackage go https://visualstudiogallery.msdn.microsoft.com/bd7675ba-1bf5-4395-8c5a-4fc19dfc0d76/file/53665/3/Tvl.VisualStudio.Language.Go.vsix
 cinst make -y
 cinst virtualbox -y
 cinst virtualbox.extensionpack -y
