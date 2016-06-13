@@ -43,6 +43,7 @@ cinst vlc -y
 cinst mremoteng -y
 cinst dropbox -y
 cinst keepass -y
+cinst intellijidea-community -y
 cinst TelnetClient -source windowsFeatures
 # Custom repo stuff
 Set-BoxstarterConfig -NugetSources "https://www.myget.org/F/maverick-mul/api/v2"
