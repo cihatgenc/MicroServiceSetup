@@ -39,6 +39,8 @@ cinst chefdk -y
 cinst dotpeek -y
 cinst nodejs -y
 cinst packer -y
+cinst vlc -y
+cinst mremoteng -y
 cinst TelnetClient -source windowsFeatures
 # Custom repo stuff
 Set-BoxstarterConfig -NugetSources "https://www.myget.org/F/maverick-mul/api/v2"
